@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>An HTML5 Slideshow w/ Canvas &amp; jQuery | Tutorialzine Demo</title>
+
+<link rel="stylesheet" type="text/css" href="estilo.css" />
+<link rel="stylesheet" type="text/css" href="fonts.css">
+
+</head>
+
+<body>
+
+
+
+	<div class="main">
+		<div class="slides">
+			<img src="img\photos\1.jpg" alt="Imagen1">
+			<img src="img\photos\2.jpg" alt="Imagen2">
+			<img src="img\photos\3.jpg" alt="Imagen3">
+			<img src="img\photos\4.jpg" alt="Imagen4">
+		</div>
+	</div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.slides.js"></script>
+<script>
+ 
+	$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 3000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+ 
+	</script>
+
+</body>
+
+
+
+</html>
